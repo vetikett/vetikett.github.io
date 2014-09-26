@@ -72,6 +72,7 @@ $(document).ready(function(){
 		};
 
 		putFilledSlotsIntoHtml();
+
 	}
 
 	// ==== place values END ==== !!!!!!!
@@ -84,7 +85,7 @@ $(document).ready(function(){
 	function matchContent(pic1, pic2) {
 		$pic1 = pic1;
 		$pic2 = pic2;
-		if ( $pic1 == $pic2 ) {
+		if ( $pic1.attr('alt') == $pic2.attr('alt') &&  $pic1.attr('id') != $pic2.attr('id') ) {
 			return true;
 		}
 	}
@@ -99,15 +100,20 @@ $(document).ready(function(){
 	// ==== effects ====
 
 	$('.victory-page').hide();
+
 	$('#start-button').click(function() {
 		
 		$('.content').hide();
+		$('.row').fadeOut(2);
+		$('.row').fadeIn(800);
+
 		startAndShuffleGame();
 
 		$('.square').click(function(){
 
-			var activeSlot = $(this).find('img').attr('alt');
+			var activeSlot = $(this).find('img').first();
 			
+	
 			$('.finished').show();
 			
 			$(this).find('.content').addClass('selected finished');
@@ -117,21 +123,23 @@ $(document).ready(function(){
 			
 			if ($twoActiveSlots.length == 0) {
 				
+				$(this).find('img').attr('id', 'item1');
 				$twoActiveSlots.push(activeSlot);
 				
 			}else if ($twoActiveSlots.length == 1) {
 				
+				$(this).find('img').attr('id', 'item2');
 				$twoActiveSlots.push(activeSlot);
 
 				if ( matchContent($twoActiveSlots[0], $twoActiveSlots[1]) ) {
-						
+
 						$completedSlots = $completedSlots.concat($twoActiveSlots);
 						$('.selected').removeClass('selected');
 						$twoActiveSlots = [];
-				
+					
 				}else {
 					
-					$('.selected').delay(600).fadeOut(300);
+					$('.selected').delay(400).fadeOut(300);
 					$('.selected').removeClass('selected finished');
 					$twoActiveSlots = [];
 				
