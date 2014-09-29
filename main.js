@@ -79,13 +79,11 @@ $(document).ready(function(){
 
 	// ==== Compare values ====
 
-	$completedSlots = [];
-	$twoActiveSlots = [];
-
+	
 	function matchContent(pic1, pic2) {
-		$pic1 = pic1;
-		$pic2 = pic2;
-		if ( $pic1.attr('alt') == $pic2.attr('alt') &&  $pic1.attr('id') != $pic2.attr('id') ) {
+		
+		if ( $(pic1).find('img').first().attr('alt') == $(pic2).find('img').first().attr('alt') &&  
+			$(pic1).attr('id') != $(pic2).attr('id') ) {
 			return true;
 		}
 	}
@@ -97,67 +95,100 @@ $(document).ready(function(){
 
 	// =========================================================
 
-	// ==== effects ====
+	// ==== Interaction & effects ====
 
-	$('.victory-page').hide();
 
 	$('#start-button').click(function() {
+		
+
+		startAndShuffleGame();
+
+		var completedSlots = [];
+		var twoActiveSlots = [];
+		var totalClicksCounter = 0;
+
+		$('.content').removeClass('selected finished');
+		
 		
 		$('.content').hide();
 		$('.row').fadeOut(2);
 		$('.row').fadeIn(800);
 
-		startAndShuffleGame();
 
-		$('.square').click(function(){
+		$('.square').on('click', function(){
 
-			var activeSlot = $(this).find('img').first();
+			var activeSlot = this;
 			
-	
-			$('.finished').show();
-			
-			$(this).find('.content').addClass('selected finished');
-			
-			$(this).find('.content').show();
-			
-			
-			if ($twoActiveSlots.length == 0) {
+			$(completedSlots).show();
+
+			if ( completedSlots.length == squares.length ) {
+
+				$('squares').off('click');
+
+			}	else if ( completedSlots == [] || completedSlots.indexOf(activeSlot) != -1  )  {
 				
-				$(this).find('img').attr('id', 'item1');
-				$twoActiveSlots.push(activeSlot);
-				
-			}else if ($twoActiveSlots.length == 1) {
-				
-				$(this).find('img').attr('id', 'item2');
-				$twoActiveSlots.push(activeSlot);
+				$(this).find('.content').removeClass('selected');
+				$('squares').off('click');
 
-				if ( matchContent($twoActiveSlots[0], $twoActiveSlots[1]) ) {
+			}else if (twoActiveSlots.indexOf(activeSlot) == 0) {
 
-						$completedSlots = $completedSlots.concat($twoActiveSlots);
-						$('.selected').removeClass('selected');
-						$twoActiveSlots = [];
+				$('squares').off('click');
+
+			} else { 
+				
+				totalClicksCounter++;
+			
+				$(this).find('.content').addClass('selected');
+
+				$(this).find('.content').show();
+				
+				if ( twoActiveSlots.length == 0) { // && not in completedSlots
+
+					$(activeSlot).addClass('finished');
+					$(activeSlot).attr('id', 'item1');
+					twoActiveSlots.push(activeSlot);
+
+				}else if (twoActiveSlots.length == 1 ) {
 					
+					$(activeSlot).addClass('finished');
+					$(activeSlot).attr('id', 'item2');
+					twoActiveSlots.push(activeSlot);
+
+					if ( matchContent(twoActiveSlots[0], twoActiveSlots[1]) && twoActiveSlots.indexOf(activeSlot) != -1) {
+							
+							$(twoActiveSlots).find('img').addClass('finished');
+							completedSlots = completedSlots.concat(twoActiveSlots);
+							twoActiveSlots = [];
+							$('.content').removeClass('selected');
+							$('.content').find('img').attr('id', null);
+						
+					}else {
+						
+						$(twoActiveSlots).find('img').removeClass('finished');
+						twoActiveSlots = [];
+						$('.selected').delay(400).fadeOut(300);
+						$('.content').removeClass('selected');
+						$(activeSlot).attr('id', null);
+						
+					}
 				}else {
-					
-					$('.selected').delay(400).fadeOut(300);
-					$('.selected').removeClass('selected finished');
-					$twoActiveSlots = [];
+					twoActiveSlots = [];
+					console.log("something went wrong :(");
 				
 				}
-			}else {
+				if (completedSlots.length == squares.length) {
+					
+					$('.totalClicksCounter').text(totalClicksCounter);
+					$('.victory-page').delay(600).fadeIn(700);
+					twoActiveSlots = [];
 				
-				$twoActiveSlots = [];
-				console.log("something went wrong :(");
-			
-			}
-			if ($completedSlots.length == squares.length) {
-				$('.victory-page').delay(700).fadeIn(700);
+				}
 			}
 		});
 	});
 
 	$('.victory-page').click(function() {
-		$('.victory-page').hide();	
+		$('.victory-page').hide();
 	});
 
 });
