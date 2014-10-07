@@ -230,6 +230,10 @@ nav a:hover {
     padding: 5px 0;
 }
 
+.page-tag-home {
+    margin: 0;
+}
+
 .page h1 {
     font-family: 'jellyka_-_le_grand_sautRg';
     letter-spacing: 4px;
@@ -238,7 +242,6 @@ nav a:hover {
 
 .home-text {
     font-family: 'jellyka_-_le_grand_sautRg';
-    text-align: center;
     margin: -10% 28% 0 0;
 }
 
