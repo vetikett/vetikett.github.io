@@ -372,9 +372,15 @@ margin-top: -14px;
         padding: 5px 10px;
     }
 
+    .page-tag-home {
+        margin: 0;
+    }
+
     .page-tag {
         margin-top: 60px;
     }
+
+
 
     .header-container {
         display: relative;
