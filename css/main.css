@@ -1,0 +1,767 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+p {
+    letter-spacing: 0.0625em;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+@font-face {
+    font-family: 'jellyka_-_le_grand_sautRg';
+    src: url('fonts/le_grand_saut-webfont.eot');
+    src: url('fonts/le_grand_saut-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/le_grand_saut-webfont.woff') format('woff'),
+         url('fonts/le_grand_saut-webfont.ttf') format('truetype'),
+         url('fonts/le_grand_saut-webfont.svg#jellyka_-_le_grand_sautRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'simple_printregular';
+    src: url('fonts/simple_print-webfont.eot');
+    src: url('fonts/simple_print-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/simple_print-webfont.woff') format('woff'),
+         url('fonts/simple_print-webfont.ttf') format('truetype'),
+         url('fonts/simple_print-webfont.svg#simple_printregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: 'simple_printregular', "Trebuchet MS", sans-serif;
+    font-size: 1.6em;
+    background: url("../img/cover.jpg"), #272727 no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    display: block;
+    color: #E3E495;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+}
+
+/* ===================
+    ALL: Theme
+   =================== */
+.header-container,
+.footer-container,
+.main aside {
+}
+
+.right-block {
+    background-color: blue;
+    width: 330px;
+    float: right;
+}
+
+.page {
+    position: absolute;
+    margin-top: 30px;
+    text-align: left;   
+    padding: 5px 26px;
+}
+
+.header-container {
+    margin: 0;
+    font-family: 'jellyka_-_le_grand_sautRg';
+    font-size: 1.25em;
+    width: 100%;
+}
+
+.main {
+
+}
+
+.page-tag {
+    margin-top: 160px;
+    width: 100%;
+}
+
+.page-tag h1 {
+    display: inline;
+    width: 100%;
+}
+
+.lyrics-box {
+    padding-top: 40px;
+}
+
+.lyrics-box h3 {
+    display: inline;
+    border-bottom: 1px solid white;
+}
+
+.footer-container {
+   
+    width: 100%;
+}
+.active {
+    color: white;
+}
+/* ==============
+    MOBILE: Menu
+   ============== */
+.main-nav {
+    display: none;
+}
+
+.mobile-nav-icon {
+    margin: 2% 0 0 7%;
+    
+}
+
+.mobile-nav-container {
+    display: block;
+}
+
+.mobile-nav-icon img {
+    margin-top: 20px;
+    width: 35px;
+}
+
+nav ul {
+    margin: 6px 0 0 -16px;
+}
+
+nav a {
+    margin-top: 10px;
+    padding: 5px 0px;
+    text-align: center;
+    text-decoration: none;
+    
+    color: #E7E998;
+}
+
+nav a:visited {
+    color: #E7E998;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding-top: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 5px 0;
+}
+
+.page h1 {
+    font-family: 'jellyka_-_le_grand_sautRg';
+    letter-spacing: 4px;
+    color: #FCFBF9;
+}
+
+.home-text {
+    font-family: 'jellyka_-_le_grand_sautRg';
+    text-align: center;
+    margin: -10% 28% 0 -18%;
+}
+
+.album-text {
+font-size: 32px;
+}
+
+.artist-text {
+font-size: 42px;
+margin-top: -14px;
+}
+
+.listen-buttons {
+    text-align: center;
+    margin: 90px 20%;
+    color: #E7E998;
+}
+
+.spotify img {
+    margin-bottom: 3px;
+    height: 50px;
+    color: #E7E998;
+    padding-bottom: 40px;
+}
+
+.itunes img {
+    height: 55px;
+    color: #E7E998;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* ANIMATIONS
+============================================================================= */
+
+
+/*.page.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+    -moz-animation:slideOutLeft 0.5s both ease-in;
+    animation:slideOutLeft 0.5s both ease-in;   
+}*/
+
+ .ng-enter        {  
+    -webkit-animation:fadeIn 0.5s both ease-in;
+    -moz-animation:fadeIn 0.5s both ease-in;
+    animation:fadeIn 0.5s both ease-in;    
+}
+
+@keyframes fadeIn {
+    0%    { opacity: 0; }
+    100%     { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+    0%    { opacity: 0; }
+    100%     { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+    0%    { opacity: 0; }
+    100%     { opacity: 1; }
+}
+
+/* slide in from the right */
+/*@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    from    { -moz-transform:translateX(100%); }
+    to      { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+    from    { -webkit-transform:translateX(100%); }
+    to      { -webkit-transform: translateX(0); }
+}*/
+
+
+
+ /* slide in from the bottom */
+/*@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+@-moz-keyframes slideOutLeft {  
+    to      { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes slideOutLeft {
+    to      { -webkit-transform: translateX(-100%); }
+}*/
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+    body {
+        font-family: 'simple_printregular', "Trebuchet MS", sans-serif;
+        background: url("../img/cover.jpg"), #272727 no-repeat;
+        background-repeat: no-repeat;
+        background-position: 0 -15px;
+        background-size: 100%;
+    }
+
+    .wrapper {
+        width: 90%;
+        height: auto;
+        margin: 0 5%;
+    }
+
+    .page {
+        position: absolute;
+        margin-top: 0;
+        text-align: left;   
+        padding: 5px 10px;
+    }
+
+    .page-tag {
+        margin-top: 60px;
+    }
+
+    .header-container {
+        display: relative;
+        margin: 0;
+    }
+
+    .menu-icon {
+        margin-bottom: -30px;
+    }
+
+    .main {
+    }
+
+    .text-block-spacer {
+        width: 45%;
+        height: 250px;
+        float: right;
+    }
+
+    .home-text {
+    font-family: 'jellyka_-_le_grand_sautRg';
+    text-align: center;
+    margin: -4% 0 0 -47%;
+    }
+
+    .album-text {
+        font-size: 64px; 
+    }
+
+    .artist-text {
+        margin-top: -50px;
+        margin-left: -8%;
+        font-size: 52px;
+    }
+
+    .listen-buttons {
+        width: 50%;
+        margin: 100px 0 0 -15px;
+        text-align: center;
+        text-decoration: none;
+        color: #E7E998;
+    }
+
+    .listen-buttons img {
+        display: inline-block;
+        margin-right: 30px;
+        width: 40%;
+        height: auto;
+    }
+
+    .spotify img {
+        margin-bottom: 3px;
+        height: auto;
+        color: #E7E998;
+        padding-bottom: 1px;
+    }
+
+    .itunes img {
+        height: auto;
+        color: #E7E998;
+        margin: 0;
+    }
+
+    .footer-container {
+    }
+
+    .main-nav{
+        display: block;
+    }
+
+    .menu-icon img {
+        width: 28px;
+        margin-bottom: 6px;
+    }
+
+     .menu-icon img {
+        width: 28px;
+        margin-bottom: 6px;
+    }
+
+    .mobile-nav-icon {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav a {
+        float: left;
+        font-size: 26px;
+        width: 15%;
+        margin: 0 ;
+        padding: 12px 0.8% 4px;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+       
+
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ====================
+    INTERMEDIATE: Main
+   ==================== */
+   
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+    body {
+        background-position: 0 -40px;
+    }
+
+    .header-container,
+    .main aside {
+        /*-webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;*/
+                
+    }
+
+     .text-block-spacer {
+        
+        height: 470px;
+    }
+
+    .home-text {
+    font-family: 'jellyka_-_le_grand_sautRg';
+    text-align: center;
+    margin: 0 0 0 -57%;
+    }
+
+    .album-text {
+        font-size: 64px; 
+    }
+
+    .artist-text {
+        margin-top: -20px;
+        margin-left: -2%;
+        font-size: 52px;
+    }
+
+    .listen-buttons {
+        margin: 120px 0 0 -4%;
+        text-align: center;
+        text-decoration: none;
+
+        color: #E7E998;
+    }
+
+     .listen-buttons img {
+        width: 40%;
+     }
+
+
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    nav a {
+        float: left;
+        font-size: 34px;
+        width: 15%;
+        margin: 0 ;
+        padding: 12px 0.8% 4px;
+        margin-bottom: 0;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+    body {
+        /*background-size: cover;*/
+    }
+
+    .main article {
+       
+            
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    body {
+        background-position: 0 -95px;
+    }
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+
+    nav ul {
+       padding: 0;
+    }
+
+    .text-block-spacer {
+        width: 55%;
+        height: 800px;
+    }
+
+    .home-text {
+        font-family: 'jellyka_-_le_grand_sautRg';
+        text-align: center;
+        margin: 0 0 0 -57%;
+    }
+
+    .album-text {
+        font-size: 64px; 
+    }
+
+    .artist-text {
+        margin-top: -20px;
+        margin-left: -2%;
+        font-size: 52px;
+    }
+
+    .listen-buttons {
+        margin: 120px 0 0 -4%;
+        text-align: center;
+        text-decoration: none;
+
+        color: #E7E998;
+    }
+
+     .listen-buttons img {
+        width: 40%;
+     }
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
