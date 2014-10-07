@@ -243,6 +243,7 @@ nav a:hover {
 .home-text {
     font-family: 'jellyka_-_le_grand_sautRg';
     margin: -10% 28% 0 0;
+    min-width: 174px; 
 }
 
 .album-text {
@@ -252,6 +253,7 @@ font-size: 32px;
 .artist-text {
 font-size: 42px;
 margin-top: -14px;
+margin-left: 15px; 
 }
 
 .listen-buttons {
@@ -372,15 +374,9 @@ margin-top: -14px;
         padding: 5px 10px;
     }
 
-    .page-tag-home {
-        margin: 0;
-    }
-
     .page-tag {
         margin-top: 60px;
     }
-
-
 
     .header-container {
         display: relative;
@@ -402,7 +398,6 @@ margin-top: -14px;
 
     .home-text {
     font-family: 'jellyka_-_le_grand_sautRg';
-    text-align: center;
     margin: -4% 0 0 0;
     }
 
@@ -412,7 +407,7 @@ margin-top: -14px;
 
     .artist-text {
         margin-top: -50px;
-        margin-left: 0;
+        margin-left: 70px;
         font-size: 52px;
     }
 
@@ -532,9 +527,7 @@ margin-top: -14px;
     }
 
     .home-text {
-    font-family: 'jellyka_-_le_grand_sautRg';
-    text-align: center;
-    margin: 0 0 0 -57%;
+        margin-left: 3%;
     }
 
     .album-text {
@@ -543,7 +536,7 @@ margin-top: -14px;
 
     .artist-text {
         margin-top: -20px;
-        margin-left: -2%;
+        margin-left: 70px;
         font-size: 52px;
     }
 
@@ -617,9 +610,7 @@ margin-top: -14px;
     }
 
     .home-text {
-        font-family: 'jellyka_-_le_grand_sautRg';
-        text-align: center;
-        margin: 0 0 0 -57%;
+        margin-left: 5%;
     }
 
     .album-text {
@@ -628,7 +619,7 @@ margin-top: -14px;
 
     .artist-text {
         margin-top: -20px;
-        margin-left: -2%;
+        margin-left: 70px;
         font-size: 52px;
     }
 
