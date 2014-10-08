@@ -528,6 +528,7 @@ margin-left: 15px;
 
     .home-text {
         margin-left: 3%;
+        min-width: 370px;
     }
 
     .album-text {
